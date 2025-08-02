@@ -10,7 +10,6 @@ window.addEventListener("scroll", () => {
   if (currentScrollY > 150 && currentScrollY > lastScrollY) {
     logo.classList.add("hide-up");
     buttons.classList.add("hide-up");
-    location.href = "https://google.com";
   } else if (currentScrollY < lastScrollY) {
     logo.classList.remove("hide-up");
     buttons.classList.remove("hide-up");
