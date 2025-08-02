@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+body, button, input, select, textarea {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+.h1 {
+    font-size: 56px; font-weight: 700;
+}
+.h2 {
+    font-size: 44px; font-weight: 700;
+}
+.h3 {
+    font-size: 38px; font-weight: 700;
+}
+.h4 {
+    font-size: 26px; font-weight: 600;
+}
+.h5, .btn-text {
+    font-size: 20px; font-weight: 500;
+}
+.p {
+    font-size: 14px; font-weight: 500;
+}
+.nav-text {
+    font-size: 16px; font-weight: 500;
+}
+  
+  .navbar {
+    height: 64px;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-logo {
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navbar-logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    max-width: 40px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 8px 20px;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 500px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0px 12px rgba(1, 125, 157, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .navbar-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #017D9D;
+  }
+  
+  .navbar-buttons {
+    display: flex;
+    gap: 12px;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Button Styles */
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #017D9D;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #016d8b;
+    border-color: #016d8b;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: #343a40;
+    border: 1px solid #017D9D;
+  }
+  
+  .btn-secondary:hover {
+    color: #017D9D;
+  }
+  
+/* Animation class */
+.hide-up {
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
+  }
+  
+  /* Ensure transitions are smooth */
+  .navbar-logo,
+  .navbar-buttons {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
