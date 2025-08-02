@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nest by Adarna Solutions</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nest by Adarna Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="mainNavbar" class="navbar">
+      <div class="navbar-container">
+        <!-- Left group: hamburger + logo -->
+        <div class="navbar-left-group">
+          <button
+            id="hamburgerMenu"
+            class="hamburger"
+            aria-label="Toggle Navigation"
+          >
+            ☰
+          </button>
+
+          <div id="navbarLogo" class="navbar-logo">
+            <img src="assets/logo 3 dash.png" alt="Logo" />
+          </div>
+        </div>
+
+        <!-- Center Nav Links (hidden on MD down) -->
+        <nav class="navbar-links">
+          <a href="#home">Features</a>
+          <a href="#features">Pricing</a>
+          <a href="#pricing">Business types</a>
+          <a href="#contact">About</a>
+        </nav>
+
+        <!-- Right Buttons -->
+        <div id="navbarButtons" class="navbar-buttons">
+          <button class="btn btn-secondary">Login</button>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </header>
+
+    <main style="height: 3000px">
+      <!-- Content here to enable scrolling -->
+    </main>
+  </body>
+
   <script src="script.js" defer></script>
-</head>
-<body>
-
-  <header id="mainNavbar" class="navbar">
-    <div class="navbar-container">
-      
-      <!-- Logo -->
-      <div id="navbarLogo" class="navbar-logo">
-        <img src="media/logo 3 dash.png" alt="Logo" />
-      </div>
-
-      <!-- Center Nav Links -->
-      <nav class="navbar-links">
-        <a href="#home">Features</a>
-        <a href="#features">Pricing</a>
-        <a href="#pricing">Business types</a>
-        <a href="#contact">About</a>
-      </nav>
-
-      <!-- Right Buttons -->
-      <div id="navbarButtons" class="navbar-buttons">
-        <button class="btn btn-secondary">Login</button>
-        <button class="btn btn-primary">Get Started</button>
-      </div>
-
-    </div>
-  </header>
-
-  <main style="height: 3000px;">
-    <!-- Content here to enable scrolling -->
-  </main>
-
-</body>
 </html>
