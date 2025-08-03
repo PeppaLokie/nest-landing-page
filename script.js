@@ -7,7 +7,7 @@ const navLinks = document.querySelector(".navbar-links");
 window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
 
-  if (currentScrollY > 150 && currentScrollY > lastScrollY) {
+  if (currentScrollY > 50 && currentScrollY > lastScrollY) {
     logo.classList.add("hide-up");
     buttons.classList.add("hide-up");
   } else if (currentScrollY < lastScrollY) {

@@ -8,6 +8,11 @@ textarea {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
+body {
+  background-color: #e5edf3;
+}
+
 .h1 {
   font-size: 56px;
   font-weight: 700;
@@ -41,7 +46,6 @@ textarea {
 .navbar {
   position: sticky;
   top: 2vh;
-  background-color: #ffffff;
   z-index: 1000;
   transition: all 0.3s ease;
   height: 64px;
@@ -51,7 +55,7 @@ textarea {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 64px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +92,7 @@ textarea {
   height: 100%;
   width: auto;
   object-fit: contain;
-  max-width: 40px;
+  max-width: 65px;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -152,7 +156,7 @@ textarea {
 }
 
 .btn-secondary {
-  background-color: white;
+    background-color: white;
   color: #343a40;
   border: 1px solid #017d9d;
 }
@@ -172,6 +176,117 @@ textarea {
 .navbar-logo,
 .navbar-buttons {
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.platform-hero {
+  background-color: #e5edf3;
+  padding: 346px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 90%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-img.left {
+  left: -47vh;
+  max-height: 57vh;
+}
+
+.hero-img.right {
+  right: -47vh;
+  max-height: 47vh;
+}
+
+.platform-hero h1 {
+  font-size: 2.5rem;
+  color: #007091;
+  font-weight: 700;
+}
+
+.platform-hero h1 span {
+  color: #0096a6;
+}
+
+.platform-hero h4 {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 700px;
+  margin: 20px auto 0;
+}
+
+/* Features Section */
+.features-section {
+  background-color: #f9fbfc;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.feature-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 100%;
+  z-index: 1;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.feature-img.left {
+  left: 0;
+}
+
+.feature-img.right {
+  right: 0;
+}
+
+.feature-text {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.feature-text h2 {
+  font-size: 2rem;
+  color: #007091;
+  margin-bottom: 12px;
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: #444;
 }
 
 /* MEDIA QUERY */
