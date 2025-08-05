@@ -10,12 +10,12 @@ textarea {
 }
 
 body {
-  background-color: #e5edf3;
+  background-color: #e5edf3 !important;
 }
 
 .custom-navbar {
   position: sticky;
-  top: 2%;
+  top: 4%;
   z-index: 1000;
   transition: all 0.3s ease;
   height: 64px;
@@ -151,6 +151,7 @@ body {
 
 /* Hero Section */
 .hero-banner {
+  background-color: #e5edf3;
   position: relative;
   width: 100%;
   height: 635px;
@@ -331,7 +332,8 @@ body {
 }
 
 .how-it-works-section {
-  padding: 80px 0;
+  padding: 60px 0;
+  background-color: #e5edf3;
   .how-it-works-header {
     margin: 60px auto 100px auto;
     max-width: 800px;
@@ -355,8 +357,8 @@ body {
   }
 
   .how-it-works-content {
-    max-width: 800px;
-    margin: 0 auto 25px auto;
+    max-width: 100%;
+    margin: 80px auto 25px auto;
     text-align: center;
     padding: 0 20px;
 
@@ -364,7 +366,7 @@ body {
       font-size: 38px !important;
       color: #007091;
       font-weight: 700;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
 
     .how-it-works-steps {
@@ -373,7 +375,6 @@ body {
         margin: 30px 0;
       }
     }
-
     .row {
       h4 {
         font-weight: 700;
