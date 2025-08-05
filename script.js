@@ -1,8 +1,8 @@
 let lastScrollY = window.scrollY;
-const logo = document.getElementById("navbarLogo");
-const buttons = document.getElementById("navbarButtons");
+const logo = document.getElementById("custom-navbarLogo");
+const buttons = document.getElementById("custom-navbarButtons");
 const hamburger = document.getElementById("hamburgerMenu");
-const navLinks = document.querySelector(".navbar-links");
+const navLinks = document.querySelector(".custom-navbar-links");
 
 window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
