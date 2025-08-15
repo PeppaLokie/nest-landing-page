@@ -12,24 +12,35 @@
   padding: 4rem 0;
 }
 
+.hero-banner__overlay {
+  position: absolute;
+  display: inline-block; /* hugs the content */
+  background-color: wheat;
+  opacity: 0.3; /* adjust transparency */
+  backdrop-filter: blur(50px); /* optional blur */
+  -webkit-backdrop-filter: blur(50px); /* Safari support */
+  padding: 20rem 22rem; /* space around text */
+  border-radius: 1000px; /* optional rounded corners */
+  margin-bottom: 80px;
+}
+
 .hero-banner__content {
   position: relative;
   z-index: 2;
-}
-
-.hero-banner__icon-grid {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  opacity: 0.85;
+  text-align: center;
 }
 
 .hero-banner__icon-grid i {
   background: rgba(255, 255, 255, 0.15);
   padding: 0.75rem;
   border-radius: 50%;
+}
+
+.hero-banner__title,
+.hero-banner__subtitle {
+  position: relative;
+  z-index: 2; /* ensure text is on top */
+  margin: 0;
 }
 
 .hero-banner__title {
