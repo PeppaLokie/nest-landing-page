@@ -1,0 +1,70 @@
+/* Offset top padding for fixed navbar */
+
+/* ===== HERO BANNER ===== */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/hero-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.hero-banner__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-banner__icon-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  opacity: 0.85;
+}
+
+.hero-banner__icon-grid i {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+.hero-banner__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.hero-banner__subtitle {
+  font-size: 1.125rem;
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .hero-banner__title {
+    font-size: 2rem;
+  }
+
+  .hero-banner__icon-grid {
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner__title {
+    font-size: 1.75rem;
+  }
+
+  .hero-banner {
+    padding: 3rem 1rem;
+  }
+}
