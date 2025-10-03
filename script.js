@@ -1,23 +1,44 @@
-let lastScrollY = window.scrollY;
-const logo = document.getElementById("custom-navbarLogo");
-const buttons = document.getElementById("custom-navbarButtons");
-const hamburger = document.getElementById("hamburgerMenu");
-const navLinks = document.querySelector(".custom-navbar-links");
+/* Navbar scroll hide/show — improved and hamburger removed */
+(function () {
+  let lastScrollY = window.scrollY || 0;
+  const logo = document.getElementById("custom-navbarLogo");
+  const buttons = document.getElementById("custom-navbarButtons");
+  const hideClass = "hide-up";
+  let ticking = false;
 
-window.addEventListener("scroll", () => {
-  const currentScrollY = window.scrollY;
+  function updateOnScroll() {
+    const currentScrollY = window.scrollY || 0;
 
-  if (currentScrollY > 50 && currentScrollY > lastScrollY) {
-    logo.classList.add("hide-up");
-    buttons.classList.add("hide-up");
-  } else if (currentScrollY < lastScrollY) {
-    logo.classList.remove("hide-up");
-    buttons.classList.remove("hide-up");
+    // hide when user scrolls down and passed a small threshold
+    if (currentScrollY > 50 && currentScrollY > lastScrollY) {
+      logo?.classList.add(hideClass);
+      buttons?.classList.add(hideClass);
+    }
+    // show when user scrolls up (with a small buffer to avoid jitter)
+    else if (currentScrollY + 10 < lastScrollY) {
+      logo?.classList.remove(hideClass);
+      buttons?.classList.remove(hideClass);
+    }
+
+    lastScrollY = currentScrollY;
   }
 
-  lastScrollY = currentScrollY;
-});
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateOnScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
+  // Passive listener for better scrolling performance
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Ensure navbar elements are visible after a resize/orientation change
+  window.addEventListener("resize", () => {
+    logo?.classList.remove(hideClass);
+    buttons?.classList.remove(hideClass);
+  });
+})();
