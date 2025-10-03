@@ -136,7 +136,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  height: 100vh;
   padding: 0 110px;
   background: #d7dde5;
 
@@ -186,96 +185,132 @@ body {
   }
 }
 
-.features {
-  padding: 80px 120px 10px;
-  max-width: 100%;
-  background-color: #fff;
+.business-types {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
 
-  .feature-category {
-    margin-bottom: 60px;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-    h2 {
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 30px;
-      color: #0f2430;
-    }
+  .section-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, auto);
-      gap: 30px;
-      padding: 0 50px;
-    }
-
-    .feature-grid-em {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      padding: 0 50px;
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-
-      .icon {
-        width: 50px;
-        height: 50px;
-        object-fit: contain;
-        flex-shrink: 0;
-        color: #017d9d !important;
-      }
-
-      h3 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 6px;
-        color: #017d9d;
-      }
-
-      p {
-        font-size: 14px;
-        color: #555;
-        line-height: 1.5;
-      }
+    .highlight {
+      color: #017d9d;
     }
   }
-}
 
-.cta-section {
-  background: #d7dde5;
-  padding: 60px 20px;
-  text-align: center;
-  color: #017d9d;
+  .section-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 50px;
+  }
 
-  .content {
-    max-width: 600px;
-    margin: 0 auto;
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
 
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 20px;
+  .business-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 3.25/4;
+    display: flex;
+    flex-direction: column;
+
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gradient-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(1, 125, 157, 0.7) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        pointer-events: none;
+      }
     }
 
-    .cta-button {
-      display: inline-block;
-      padding: 12px 40px;
-      background: #017d9d;
-      color: white;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 18px;
-      text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(1, 125, 157, 0.92);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+      .overlay-content {
+        text-align: center;
+        max-width: 85%;
+
+        h3 {
+          font-size: 40px;
+          font-weight: 800;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 400;
+          margin-bottom: 50px;
+          line-height: 1.5;
+        }
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          justify-content: center;
+          gap: 40px 40px;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+
+            .icon {
+              width: 60px;
+              height: 60px;
+              object-fit: contain;
+              display: block;
+              flex-shrink: 0;
+            }
+          }
+        }
       }
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
