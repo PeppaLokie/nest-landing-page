@@ -130,3 +130,240 @@ body {
     pointer-events: none;
   }
 }
+
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  height: 100vh;
+  padding: 0 110px;
+  background: #d7dde5;
+
+  .hero-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: 800;
+      margin-bottom: 30px;
+      color: #017d9d;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 36px;
+      background: #017d9d;
+      color: #fff;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(1, 125, 157, 0.15);
+      }
+    }
+  }
+
+  .hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .hero-img {
+      max-width: 100%;
+      max-height: 80vh;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    }
+  }
+}
+
+.features {
+  padding: 80px 120px 10px;
+  max-width: 100%;
+  background-color: #fff;
+
+  .feature-category {
+    margin-bottom: 60px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 30px;
+      color: #0f2430;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, auto);
+      gap: 30px;
+      padding: 0 50px;
+    }
+
+    .feature-grid-em {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 0 50px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        flex-shrink: 0;
+        color: #017d9d !important;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: #017d9d;
+      }
+
+      p {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.cta-section {
+  background: #d7dde5;
+  padding: 60px 20px;
+  text-align: center;
+  color: #017d9d;
+
+  .content {
+    max-width: 600px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 40px;
+      background: #017d9d;
+      color: white;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #003847;
+  color: #fff;
+  padding: 60px 40px;
+  font-family: "Inter", sans-serif;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-column:first-child {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-column {
+    flex: 1;
+
+    h4 {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #d7dde5;
+    }
+  }
+
+  .footer-logo {
+    max-width: 220px;
+    margin-bottom: 0;
+  }
+
+  .footer-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d7dde5;
+  }
+
+  .footer-links,
+  .footer-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #cceeff;
+      }
+    }
+  }
+
+  .footer-social {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
