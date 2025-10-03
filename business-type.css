@@ -189,6 +189,7 @@ body {
   padding: 80px 20px;
   background: #f9f9f9;
   text-align: center;
+  width: 100%;
 
   .container {
     max-width: 1200px;
@@ -213,8 +214,8 @@ body {
 
   .business-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
   }
 
   .business-card {
@@ -293,6 +294,7 @@ body {
             font-size: 16px;
             display: flex;
             align-items: center;
+            text-align: left;
             justify-content: flex-start;
             gap: 8px;
 
@@ -311,6 +313,61 @@ body {
     &:hover .overlay {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  .other-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 12px;
+    text-align: center;
+
+    .container {
+      width: 100%;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #017d9d;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 16px 20em;
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      justify-content: center;
+      text-align: left;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 24px;
+        font-weight: 500;
+
+        &::before {
+          content: "";
+          width: 30px;
+          height: 30px;
+          background: url("https://img.icons8.com/?size=100&id=zxyg1S6k3sb5&format=png&color=017D9D")
+            no-repeat center center;
+          background-size: contain;
+          flex-shrink: 0;
+        }
+      }
     }
   }
 }
