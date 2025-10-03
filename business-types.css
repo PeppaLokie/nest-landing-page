@@ -1,80 +1,132 @@
-/* Offset top padding for fixed navbar */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
 
-/* ===== HERO BANNER ===== */
-.hero-banner {
-  position: relative;
-  width: 100%;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #017d9d;
-  padding: 4rem 0;
-}
-
-.hero-banner__overlay {
-  position: absolute;
-  display: inline-block; /* hugs the content */
-  background-color: wheat;
-  opacity: 0.3; /* adjust transparency */
-  backdrop-filter: blur(50px); /* optional blur */
-  -webkit-backdrop-filter: blur(50px); /* Safari support */
-  padding: 20rem 22rem; /* space around text */
-  border-radius: 1000px; /* optional rounded corners */
-  margin-bottom: 80px;
-}
-
-.hero-banner__content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.hero-banner__icon-grid i {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 0.75rem;
-  border-radius: 50%;
-}
-
-.hero-banner__title,
-.hero-banner__subtitle {
-  position: relative;
-  z-index: 2; /* ensure text is on top */
+body,
+button,
+input,
+select,
+textarea {
   margin: 0;
+  font-family: "Poppins", sans-serif !important;
 }
 
-.hero-banner__title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
+body {
+  background-color: #d7dde5 !important;
 }
 
-.hero-banner__subtitle {
-  font-size: 26px;
-  max-width: 650px;
-  margin: 0 auto;
-  opacity: 0.9;
-  color: black;
-}
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  height: 72px;
+  margin-top: 2vh;
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-  .hero-banner__title {
-    font-size: 2rem;
+  .custom-navbar-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    position: relative;
+
+    /* Logo */
+    .custom-navbar-logo {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      img {
+        height: 58px;
+        width: auto;
+        max-width: 80px;
+        object-fit: contain;
+      }
+    }
+
+    /* Links (centered) */
+    .custom-navbar-links {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+
+      padding: 8px 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 500px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 0px 12px rgba(1, 125, 157, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      font-size: 16px;
+      font-weight: 500;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          color: #017d9d !important;
+        }
+      }
+    }
+
+    /* Buttons (right) */
+    .custom-navbar-buttons {
+      display: flex;
+      gap: 12px;
+
+      .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        border: none !important;
+        border-radius: 200px !important;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &.btn-primary {
+          background-color: #017d9d !important;
+          color: white;
+
+          &:hover {
+            background-color: #016d8b;
+          }
+        }
+
+        &.btn-secondary {
+          background-color: white !important;
+          color: #343a40 !important;
+          border: 1px solid #017d9d !important;
+
+          &:hover {
+            color: #017d9d !important;
+          }
+        }
+      }
+    }
   }
 
-  .hero-banner__icon-grid {
-    gap: 1rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-banner__title {
-    font-size: 1.75rem;
+  .custom-navbar-logo,
+  .custom-navbar-buttons {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    will-change: transform, opacity;
   }
 
-  .hero-banner {
-    padding: 3rem 1rem;
+  .hide-up {
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
   }
 }

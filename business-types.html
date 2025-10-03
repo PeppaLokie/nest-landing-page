@@ -3,48 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Types - Nest by Adarna Solutions</title>
-
-    <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Bootstrap Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-
-    <!-- Global Styles (shared navbar/footer) -->
+    <title>Nest by Adarna Solutions</title>
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- Page-specific Styles -->
-    <link rel="stylesheet" href="business-types.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="assets/ico.png" type="image/png" />
   </head>
   <body>
-    <!-- ===== HEADER / NAVBAR ===== -->
     <header id="maincustom-navbar" class="custom-navbar">
       <div class="custom-navbar-container">
-        <!-- Left group: hamburger + logo -->
-        <div class="custom-navbar-left-group">
-          <button
-            id="hamburgerMenu"
-            class="hamburger"
-            aria-label="Toggle Navigation"
-          >
-            ☰
-          </button>
-
-          <div id="custom-navbarLogo" class="custom-navbar-logo">
-            <img src="assets/logo 3 dash.png" alt="Logo" />
-          </div>
+        <!-- Logo -->
+        <div id="custom-navbarLogo" class="custom-navbar-logo">
+          <img src="assets/logo 3 dash all blue.png" alt="Logo" />
         </div>
 
         <!-- Center Nav Links (hidden on MD down) -->
         <nav class="custom-navbar-links">
-          <a href="#feature">Features</a>
+          <a href="#features">Features</a>
           <a href="#business-types">Business types</a>
           <a href="#about">About</a>
         </nav>
@@ -56,77 +39,22 @@
         </div>
       </div>
     </header>
-
-    <!-- ===== HERO BANNER ===== -->
-    <section class="hero-banner">
-      <div class="hero-banner__overlay"></div>
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-10 col-md-12">
-            <div class="hero-banner__content">
-              <h1 class="hero-banner__title">Who Can Use Nest?</h1>
-              <h4 class="hero-banner__subtitle">
-                Designed for businesses that want smarter sales, simpler
-                inventory, and powerful analytics.
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="footer-container">
-        <!-- Column 1: Logo + Description -->
-        <div class="footer-column">
-          <img
-            src="assets/NEW ADARNA LOGO png white text.png"
-            alt="Company Logo"
-            class="footer-logo"
-          />
-          <p class="footer-description">
-            Adarna Solutions is the creator of Nest, a powerful platform with
-            built-in POS, inventory management, and AI-driven
-            analytics—featuring sales projections, top and slow-moving product
-            insights, and low-stock notifications.
-          </p>
-        </div>
-
-        <!-- Column 2: Quick Links -->
-        <div class="footer-column">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#about">About</a></li>
-          </ul>
-        </div>
-        <!-- Column 3: Social + Website -->
-        <div class="footer-column">
-          <h4>Connect</h4>
-          <ul class="footer-social">
-            <li>
-              <a
-                href="https://www.facebook.com/profile.php?id=61578353685737"
-                target="_blank"
-                ><span> <i data-lucide="facebook" class="my-class"></i></span>
-                <span class="text-link">Facebook Page</span></a
-              >
-            </li>
-            <li>
-              <a href="https://www.yourcompanywebsite.com" target="_blank"
-                ><span> <i data-lucide="globe" class="my-class"></i></span>
-                <span class="text-link">Official Website</span></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Bootstrap 5 JS -->
-    <script src="script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
+
+  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+    crossorigin="anonymous"
+  ></script>
 </html>
